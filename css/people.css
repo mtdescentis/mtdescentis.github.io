@@ -1,0 +1,99 @@
+.card .profile-card {
+    font-size: 1em;
+    overflow: hidden;
+    padding: 0;
+    border: none;
+    border-radius: .28571429rem;
+    text-align: center;
+}
+
+.card {
+    box-shadow: 0 1px 3px 0 #d4d4d5, 0 0 0 1px #d4d4d5;
+}
+
+.card-block {
+    font-size: 1em;
+    position: relative;
+    margin: 0;
+    padding: 1em;
+    border: none;
+    border-top: 1px solid rgba(34, 36, 38, .1);
+    box-shadow: none;
+}
+
+.card-img-top {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.card-title {
+    font-size: 1.28571429em;
+    font-weight: 700;
+    line-height: 1.2857em;
+}
+
+.card-text {
+    clear: both;
+    margin-top: .5em;
+    color: rgba(0, 0, 0, .68);
+}
+
+.circle-img {
+    
+    width: 11em;
+    height: 11em;
+    background-size: cover;
+    background-position: top;
+    border-radius: 50%;
+    display: inline-block;
+    margin: 5px 0 5px 0;
+}
+
+.bio{
+    text-align: justify;
+    font-size: 16px;
+}
+
+.bio h1, h2, h3, h4, h5, h6 {
+    margin: 15px 0 10px;
+    letter-spacing: 2px;
+}
+
+p.title {
+    font-size: 1.8em;
+    letter-spacing: 1px;
+    margin: 35px 0 0 0;
+}
+
+.profile-navbar {
+    background: #000 !important;
+}
+
+.profile-section {
+  margin-top: 5em;
+}
+
+
+.profile-name{
+  text-align: left;
+  font-size: 1.4em;
+}
+
+.borderless > tbody > tr > td{
+    border: none !important;
+}
+
+@media only screen 
+and (min-width : 1px) and (max-width : 1000px) {
+  .profile-name{
+    text-align: center;
+    padding-bottom: 35px;
+  }
+
+  p.title {
+    font-size: 1.8em;
+    letter-spacing: 1px;
+    margin: 0 0 0 0;
+}
+}

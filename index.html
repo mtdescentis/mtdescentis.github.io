@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Malgudi">
+    <meta name="author" content="Lalengmawia">
+
+    <title>The KML Project</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Fonts -->
+    <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=PT+Sans" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Dosis|PT+Sans+Narrow|Titillium+Web" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet">
+
+    <!-- CSS -->
+    <link href="css/malgudi.css" rel="stylesheet">
+    <link href="css/people.css" rel="stylesheet" >
+
+</head>
+
+<body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top">
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-custom navbar-fixed-top profile-navbar" role="navigation">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-main-collapse">
+                    Menu <i class="fa fa-bars"></i>
+                </button>
+                <a class="navbar-brand page-scroll" href="">
+                 <img src='img/logo.png' height=100px> <span class="light"></span> 
+             </a>
+         </div>
+
+         <!-- Collect the nav links, forms, and other content for toggling -->
+         <div class="collapse navbar-collapse navbar-right navbar-main-collapse">
+            <ul class="nav navbar-nav">
+                <!-- Hidden li included to remove active class from about link when scrolled up past about section -->
+                <li class="hidden">
+                    <a href="#page-top"></a>
+                </li>
+                <li>
+                    <a href="" style='text-align:right'>Amit Kumar Verma</a>
+                </li>
+
+
+            </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container -->
+</nav>
+
+<!-- Profile Section -->
+<section id="profile" class="content-section text-center">
+    <div class="profile-section">
+        <div class="container">
+            <div class="col-lg-8 col-lg-offset-2">
+
+                <div>
+                    <div class="row">
+                        <div >
+                            <div class="profile-card">
+                                <div class="row">
+                                    <div class="col-sm-12 col-md-3"></div>
+                                    <div class="col-sm-12 col-md-3">
+                                        <div class="circle-img" style="background-image: url('img/photo/k_logo.jpg')"></div>
+                                    </div>
+                                    <div class="col-sm-12 col-md-6">
+                                        <div class="profile-container">
+                                            <div class="profile-name">
+                                                <p class="title">Knowledge Markup Language</p>
+                                                <!-- <i class="fa fa-envelope fa-lg" aria-hidden="true"></i> jaspal.singh@iitrpr.ac.in -->
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card-block bio">
+
+                                    <h5>What is KML Project?</h5>
+                                    KML stands for Knowledge Markup Language, a standard format for storing the data of all the Knowledge Building Portals. Knowledge Building portals like Wikipedia, Stack Exchange, GitHub, e.t.c provides their data dump in their own formats. We are trying to propose a new standard format for all these types of portals such that the analysis is easy. This project is being carried out under the supervision of <a href='http://sudarshaniyengar.com' target="blank">Dr. Sudarshan Iyengar</a>.    
+                                    <br/><br/>
+
+
+                                    <h5>Need for KML</h5>
+                                    All these Knowledge Building portals provides their data dumps in their own format. For example, Wikipedia provides its data in a XML format with their own schema definition. Similarly Stack Exchange provides its data dump in a XML format with different schema definition. The KML will be a new standard format for these kind of Knowledge Building portals with a standard schema definition. The idea is to make KML flexible enough such that it can store the data of any kind of Knowledge Building portals. 
+                                    <br/><br/>
+
+                                    <h5>Wikipedia Schema</h5>
+                                    Wikipedia is the largest and most popular free online encyclopedia with the aim to allow anyone to edit articles. The Wikimedia Foundation (WMF) releases data dumps of Wikipedia on a regular basis in the form of XML. XML dumps since 2010 are in the wrapper format described using this <a href='https://www.mediawiki.org/xml/export-0.8.xsd' target="blank">Schema</a>. The Wikipedia schema is described in the form of diagram below<br/><br/>
+                                    <img src="img/photo/Wiki_Schema.jpg">
+                                    <br/><br/> 
+                                    <h5>Stack Exchange Data</h5>
+                                    Stack Exchange is a network of question-and-answer websites on topics in varied fields, each site covering a specific topic, where questions, answers, and users are subject to a reputation award process. Stack Exchange provides the data of each site in XML format. Each site is formatted as a saperate archive consisting of XML files. Each site archive includes Posts, Users, Votes, Comments, PostHistory and PostLinks.
+                                    <br/><br/>
+                                    <img src="img/photo/Stack_Exchange.jpg">
+                                    <br/><br/>
+                                    The above diagram explains the schema of post.xml of <a href='https://astronomy.stackexchange.com/' target="blank">Astronomy StackExchange</a>. The root element is the page for the schema. Each page contains many rows with unique identity number associated with it. The row element has an attribute PostTypeId which represents whether it is a question or answer. All other attributes are self explanatory.
+                                    <h5>KML ADT (Basic Version)</h5>
+                                    The is to have a format which is capable and flexible enough to store the data of all types of Knowledge Building Portals. As a first version, we propose an ADT similar to Wikipedia. The root tag will be the "KData" having miltiple topics as its elements. The overall schema is as follows.
+                                    <br/><br/>
+                                    <img src="img/photo/kml_schema.jpg">
+                                    <br/><br/>
+
+<!--                                     <h5>References</h5>
+                                    <ol>
+                                        <li>
+                                            Gupta, Yayati, Akrati Saxena, Debarati Das, and S. R. S. Iyengar. "Modeling Memetics using Edge Diversity."  Volume 644 of the series Studies in Computational Intelligence pp 187-198
+                                        </li>
+                                        <li>
+                                            Gupta, Yayati, Debarati Das, and S. R. S. Iyengar. "Pseudo-Cores: The Terminus of an Intelligent Viral Meme's Trajectory." Volume 644 of the series Studies in Computational Intelligence pp 213-226
+                                        </li>
+                                        <li>
+                                            Y. Gupta, J. S. Saini, N. Sridhar and S. R. S. Iyengar, "Shifting behaviour of users: Towards understanding the fundamental law of Social Networks," 2016 8th International Conference on Communication Systems and Networks (COMSNETS), Bangalore, 2016, pp. 1-6.
+                                        </li>
+                                        <li>
+                                            Saxena, Akrati, S. R. S. Iyengar, and Yayati Gupta. "Understanding Spreading Patterns on Social Networks Based on Network Topology." Proceedings of the 2015 IEEE/ACM International Conference on Advances in Social Networks Analysis and Mining 2015. ACM, 2015.
+                                        </li> -->
+                                    </ol>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+<!-- Footer -->
+<footer>
+    <div class="container text-center">
+        <p>Copyright &copy; Malgudi Labs 2017</p>
+    </div>
+</footer>
+
+<!-- jQuery -->
+<script src="vendor/jquery/jquery.js"></script>
+
+<!-- Bootstrap Core JavaScript -->
+<script src="vendor/bootstrap/js/bootstrap.js"></script>
+
+<!-- Plugin JavaScript -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
+
+<!-- Theme JavaScript -->
+<script src="js/malgudi.js"></script>
+</body>
+
+</html>
